@@ -10,3 +10,4 @@
 В 90% случаев предполагается придерживаться стандарта [MS](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/index). Здесь же будут описаны отличия, от этого стандарта.
 
 
+1. Tab vs Space.  
