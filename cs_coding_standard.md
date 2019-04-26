@@ -219,11 +219,11 @@ IEnumerable<int> CreateRange(int len, int defVal)
 {
         var result = new int[len];
         for(int i =0; i < len; ++i) 
-		{
-			result[i] = defVal;
-		}
+	{
+		result[i] = defVal;
+	}
 		
-		return result;
+	return result;
 }
 
 //GOOD 
@@ -231,21 +231,23 @@ int[] CreateRange(int len, int defVal) // or IReadOnlyCollection<int> - если
 {
         var result = new int[len];
         for(int i =0; i < len; ++i) 
-		{
-			result[i] = defVal;
-		}
-		
-		return result;
+	{
+		result[i] = defVal;
+	}
+	
+	return result;
 }
 
 
 //GOOD (для примера)
 IEnumerable<int> FilterOnlyOdd(IEnumerable<int> source)
 {
-        foreach(var itr in source){
-            if(itr % 2 != 0) {
-				yield  return itr;
-			}
+	foreach(var itr in source)
+	{
+        	if(itr % 2 != 0) 
+	    	{
+			yield  return itr;
+		}
         }
 }
 
