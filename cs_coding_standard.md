@@ -45,33 +45,33 @@ if(Ok) //Good
 #### 3. Уровни доступа и расположение в коде. ####
 Код должен распологаться по уровню доступа в классе следующим образом:
 1. public static 
-    a. constructor
-    b. readonly fields    
-    c. properties
-    d. methods
+    a. constructor  
+    b. readonly fields      
+    c. properties  
+    d. methods  
 2. public 
-    a. constructor
-    b. readonly fields    
-    c. properties
-    d. methods
-3. internal static 
-    a. constructor
-    b. ...
-4. internal
-    a. constructor
-    b. ...
-5. protected
-    a. constructor
-    b. ...
-6. private static 
-    a. constructor
-    b. properties
-    d. methods
-7. private  
-    a. constructor
-    b. properties
-    d. methods
-    c. static/nonstatic readonly/nonreadonly fields.
+    a. constructor  
+    b. readonly fields      
+    c. properties  
+    d. methods  
+3. internal static   
+    a. constructor  
+    b. ...  
+4. internal  
+    a. constructor  
+    b. ...  
+5. protected  
+    a. constructor  
+    b. ...  
+6. private static   
+    a. constructor  
+    b. properties  
+    d. methods  
+7. private    
+    a. constructor  
+    b. properties  
+    d. methods  
+    c. static/nonstatic readonly/nonreadonly fields.  
 
 #### 4. "Только для чтения" ####
 Если стоит выбор между созданием открытого свойства "только для чтения" и созданием откытого поля "только для чтения", то выбор делается на основе ответа на вопрос "Есть ли дополнительная логика при доступе к данным?". Если дополнительной логики нет - надо создавать открытое поле "только для чтения", иначе - свойство.  
