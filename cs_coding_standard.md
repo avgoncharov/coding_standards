@@ -1,5 +1,5 @@
 
-### Стандарт кодирования на C# ###
+# Стандарт кодирования на C# #
 
 За основу взяты следующие стандарты:  
 * [MS Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/index)   
