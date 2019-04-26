@@ -71,7 +71,73 @@ if(Ok) //Good
     a. constructor  
     b. properties  
     d. methods  
-    c. static/nonstatic readonly/nonreadonly fields.  
+    c. static/nonstatic readonly/nonreadonly fields.  (т.к. приватные поля любого типа вообще не должны ни кого интересовать).
+    
+*Мотивация*: Чем более открыта конструкция "внешниму" миру, тем раньше она должна возникать по тексту в коде. 
+*Пример*
+```C#
+// !!! Bad !!!
+class Persone
+{
+        private readonly Date _dateOfBirth;
+        private readonly string _firstNamename;
+        private string _lastName;
+        //...
+        public Address Position{get;set;}
+        public string FirstName{get{return _firstName;}}
+        public string LastName{get{return _lastName;} set{_lastName= value;}}
+        
+        public Person(Date dateOfBirth, string firs...)
+        {
+                ...
+        }
+        
+        private string FormFullInfo()
+        {
+                ....
+        }
+        
+        public override string ToString()
+        {
+                ....
+        }
+        
+}
+
+//----------------------------------------------------------------------
+// GOOD:
+class Persone
+{        
+        public Person(Date dateOfBirth, string firs...)
+        {
+                ...
+        }
+        
+        
+        public Address Position{get;set;}
+        public string FirstName{get{return _firstName;}}
+        public string LastName{get{return _lastName;} set{_lastName= value;}}
+
+
+        public override string ToString()
+        {
+                ....
+        }
+
+        
+        private string FormFullInfo()
+        {
+                ....
+        }
+        
+                
+        private readonly Date _dateOfBirth;
+        private readonly string _firstNamename;
+        private string _lastName;
+        //...        
+}
+```
+
 
 #### 4. "Только для чтения" ####
 Если стоит выбор между созданием открытого свойства "только для чтения" и созданием откытого поля "только для чтения", то выбор делается на основе ответа на вопрос "Есть ли дополнительная логика при доступе к данным?". Если дополнительной логики нет - надо создавать открытое поле "только для чтения", иначе - свойство.  
