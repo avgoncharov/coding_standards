@@ -54,30 +54,30 @@ if(Ok) //Good
 
 #### 3. Уровни доступа и расположение в коде. ####
 Код должен распологаться по уровню доступа в классе следующим образом:
-1. public static 
+1. public static   
     a. constructor  
     b. readonly fields      
     c. properties  
     d. methods  
-2. public 
+2. public   
     a. constructor  
     b. readonly fields      
     c. properties  
     d. methods  
-3. internal static   
+3. internal static     
     a. constructor  
     b. ...  
-4. internal  
+4. internal    
     a. constructor  
     b. ...  
-5. protected  
+5. protected    
     a. constructor  
     b. ...  
-6. private static   
+6. private static    
     a. constructor  
     b. properties  
     d. methods  
-7. private    
+7. private      
     a. constructor  
     b. properties  
     d. methods  
