@@ -1,6 +1,6 @@
 
 # Стандарт кодирования на C# #
-![](https://github.com/avgoncharov/coding_standards/blob/master/AVG3.png) 
+![](https://github.com/avgoncharov/coding_standards/blob/master/CS_AVG.png) 
 
 За основу взяты следующие стандарты:  
 * [MS Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/index)   
