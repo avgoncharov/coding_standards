@@ -5,7 +5,7 @@
 * [MS Framework Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/index)   
 * [NASA C++ Coding Standards and Style Guide](https://ntrs.nasa.gov/search.jsp?R=20080039927)  
 * [Linux kernel coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html)  
-*	[Bill Wagner - Effective C# - Bill Wagner](http://www.thebillwagner.com/Resources)  
+* [Bill Wagner - Effective C# - Bill Wagner](http://www.thebillwagner.com/Resources)  
 
 В 90% случаев предполагается придерживаться стандарта [MS](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/index). Здесь же будут описаны отличия, от этого стандарта.
 
@@ -16,7 +16,7 @@
 *Мотивация*: Таб представляет собой один символ, при этом он позволяет настроить среду как удобно пользователю, хоть 2а пробела, 4е пробела или даже 8 пробелов.  
 
 #### 2. Фигурные скобки.  ###
-Все что может быть ограничено фигурными скобками, должно быть ими ограничено.  
+Все что может быть ограничено фигурными скобками, должно быть ими ограничено. Фигурную скобку можно оставлять в той же строке, как и в стандарте [Linux kernel coding style](https://www.kernel.org/doc/html/v4.10/process/coding-style.html).
 
 *Мотивация*: Основная мотивация - однородность кода, так его легче воспринимать. Из-за простоты восприятия, снижается вероятность ошибки когда кто-то закомментирует строчку кода после if/while и т.п. и следующая строка станет считаться телом оператора.
 
@@ -25,10 +25,15 @@
 if(Ok) 
     return OkResult;  // Bad
 
-if(Ok) //Good
-{
+if(Ok) { //Good
     return OkResult;
 }
+
+if(Ok) //Good
+{    
+    return OkResult;
+}
+
 ```
 
 #### 3. Пустая строка между частями кода. ####
