@@ -1,5 +1,5 @@
 
-![](https://github.com/avgoncharov/coding_standards/blob/master/AVG.png) 
+![](https://github.com/avgoncharov/coding_standards/blob/master/AVG2.png) 
 # Стандарт кодирования на C# #
 
 За основу взяты следующие стандарты:  
