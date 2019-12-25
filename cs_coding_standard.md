@@ -244,7 +244,8 @@ b. Если класс помечен как sealed, и именно он реа
 IEnumerable<int> CreateRange(int len, int defVal)
 {
         var result = new int[len];
-        for(int i =0; i < len; ++i) {
+        for(int i =0; i < len; ++i) 
+	{
 		result[i] = defVal;
 	}
 		
@@ -255,7 +256,8 @@ IEnumerable<int> CreateRange(int len, int defVal)
 int[] CreateRange(int len, int defVal) // or IReadOnlyCollection<int> - если хотим вернуть неизменяемую.
 {
         var result = new int[len];
-        for(int i =0; i < len; ++i) {
+        for(int i =0; i < len; ++i) 
+	{
 		result[i] = defVal;
 	}
 	
@@ -266,8 +268,10 @@ int[] CreateRange(int len, int defVal) // or IReadOnlyCollection<int> - если
 //GOOD (для примера)
 IEnumerable<int> FilterOnlyOdd(IEnumerable<int> source)
 {
-	foreach(var itr in source) {
-        	if(itr % 2 != 0) {
+	foreach(var itr in source) 
+	{
+        	if(itr % 2 != 0) 
+		{
 			yield  return itr;
 		}
         }
@@ -281,8 +285,10 @@ IEnumerable<int> FilterOnlyOdd(IEnumerable<int> source)
 int CountOnlyOdd(IEnumerable<int> source)
 {
 	long count = 0;
-	foreach(var itr in source) {
-        	if(itr % 2 != 0) {
+	foreach(var itr in source) 
+	{
+        	if(itr % 2 != 0) 
+		{
 			count++;
 		}
         }
@@ -295,8 +301,10 @@ int CountOnlyOdd(IEnumerable<int> source) //WARN: лучше принимать 
 {
 	var bufSource = source.Take(Int32.Max); //WARN: должно быть разумное ограничение.
 	int count = 0;
-	foreach(var itr in bufSource) {
-        	if(itr % 2 != 0) {
+	foreach(var itr in bufSource) 
+	{
+        	if(itr % 2 != 0) 
+		{
 			count++;
 		}
         }
@@ -317,12 +325,14 @@ int CountOnlyOdd(IEnumerable<int> source) //WARN: лучше принимать 
 *Пример*:
 ```C#
 //BAD
-if(!string.IsNullOrEmpty(str)) {
+if(!string.IsNullOrEmpty(str))
+{
 	///...
 }
 
 //GOOD
-if(string.IsNullOrEmpty(str) != true) {
+if(string.IsNullOrEmpty(str) != true) 
+{
 	///...
 }
 ```
