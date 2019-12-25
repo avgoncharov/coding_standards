@@ -332,6 +332,15 @@ if(string.IsNullOrEmpty(str) != true) {
 
 #### 5. Смешивание async / sycn. ####
 Стараться не смешивать асинхронный и синхронный код. 
-Если же приходится использовать конструкцию `var x = Task.Run(someTask).GetAwaiter().GetResult();`
+Если же приходится использовать конструкцию 
+```
+async Task<Result> SomeTaskAsync(/*parameters*/) 
+{
+    //Code
+}
+
+//How to mix sync / async:
+var x = Task.Run(SomeTask).GetAwaiter().GetResult();
+```
 
 
