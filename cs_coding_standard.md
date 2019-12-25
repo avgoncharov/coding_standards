@@ -333,7 +333,7 @@ if(string.IsNullOrEmpty(str) != true) {
 #### 5. Смешивание async / sycn. ####
 Стараться не смешивать асинхронный и синхронный код. 
 Если же приходится использовать конструкцию 
-```
+```C#
 async Task<Result> SomeTaskAsync(/*parameters*/) 
 {
     //Code
